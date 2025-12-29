@@ -2,6 +2,23 @@
 
 Public **CORE** repository for study, analysis, and demonstration.
 
+## Origin story (why this exists)
+
+This project started as a practical, hands-on effort: reviewing and testing many “robots” and approaches to understand what is real vs. noise in live markets.
+
+Over time, the production system evolved into something much larger than a public demo:
+
+- It accumulated operational tooling, validation workflows, and safety constraints.
+- It incorporated research and implementation details that are not appropriate to publish in full.
+- It became “operationally sensitive” (easy to misuse or misrepresent if copied without context).
+
+That is why the project is now split:
+
+- **CORE (this repo):** a minimal, auditable demo for learning.
+- **PREMIUM (private):** the production codebase and operational stack.
+
+If you’re here to learn, CORE is intentionally kept small and readable.
+
 ## What this is
 
 - A simplified **MQL5 demo EA** intended for educational purposes.
@@ -16,6 +33,15 @@ Public **CORE** repository for study, analysis, and demonstration.
 See:
 - `TRADING_RESTRICTIONS.md`
 - `DATA_SOURCES.md`
+
+## How to read this repo
+
+Start with these files (in order):
+
+1) `TRADING_RESTRICTIONS.md` — non-negotiable usage restrictions.
+2) `DATA_SOURCES.md` — dataset policy (no redistribution).
+3) `MQL5/Experts/AurumCore.mq5` — the entire demo EA source.
+4) `docs/PREMIUM_NOTE.md` — sanitized overview of what exists privately.
 
 ## Quickstart (study/demo)
 
@@ -52,7 +78,7 @@ Legend:
 | MQL5 EA source | ✅ | ✅ |
 | Minimal demo strategy (EMA cross) | ✅ | ❌ |
 | Multi-strategy routing/selection | ❌ | ✅ |
-| Advanced confluence/SMC-style logic | ❌ | ✅ |
+| Advanced confluence / proprietary logic | ❌ | ✅ |
 | News-aware gating / calendar | ❌ | ✅ |
 | Risk management (prop-firm constraints, DD/HWM) | ❌ | ✅ |
 | Time-gates / session rules | ❌ | ✅ |
@@ -64,25 +90,30 @@ Legend:
 | Overfit controls / validation tooling | ❌ | ✅ |
 | ML experiments/models (optional) | ❌ | ✅ |
 | Datasets redistributed | ❌ | ❌ |
-| Live trading allowed | ❌ | ✅ *(subject to your private ops + compliance)* |
+| Live trading allowed | ❌ | ✅ *(private only, with ops controls)* |
 
 Notes:
 - CORE is intentionally constrained so the public code stays reviewable and does not ship operational “go-live” capability.
 - PREMIUM details, datasets, and operational infra are intentionally private.
 
-## CORE vs PREMIUM (high-level)
+## Glossary (quick)
 
-This repository (**CORE**) is the public demo/study layer.
-
-The full production system (**PREMIUM**, private) includes components such as:
-
-- Advanced strategy logic, routing/selection, and execution modeling
-- Risk management + prop-firm compliance enforcement
-- Backtesting/optimization infrastructure (WFA, stress, overfit controls)
-- Operational tooling (monitoring, configs, incident playbooks)
-- ML experiments/models (where applicable)
-
-See `docs/PREMIUM_NOTE.md` for a sanitized overview.
+- **EA (Expert Advisor):** automated trading program for MetaTrader.
+- **CORE:** public demo/study repository with minimal logic.
+- **PREMIUM:** private production repository (full system + ops).
+- **MagicNumber:** identifier used to tag orders/positions belonging to this EA.
+- **Spread:** difference between bid and ask (cost); CORE can block entries above a limit.
+- **Slippage:** difference between expected and actual fill price due to execution conditions.
+- **Commission:** per-trade fee model (broker/venue dependent).
+- **Latency:** execution delay that impacts fills and performance.
+- **Tick vs Bar:** tick = every price update; bar = aggregated candle over a timeframe.
+- **Timeframe (TF):** candle period (e.g., M5).
+- **DD (Drawdown):** peak-to-trough equity decline.
+- **HWM (High-Water Mark):** highest equity point used by some trailing DD rules.
+- **WFA (Walk-Forward Analysis):** validate performance across rolling in-sample/out-of-sample windows.
+- **Overfitting:** strategy fits historical noise and fails out-of-sample.
+- **Prop firm constraints:** risk rules imposed by evaluation/funded accounts.
+- **News gating:** reducing or blocking trading around scheduled high-impact news.
 
 ## Contents
 
