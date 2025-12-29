@@ -40,6 +40,36 @@ Safety notes:
 
 This is meant to be understandable and auditable in one sitting.
 
+## Feature matrix (CORE vs PREMIUM)
+
+Legend:
+- ✅ = included
+- ❌ = not included
+- ⚠️ = partial / simplified demo
+
+| Area | CORE (public demo) | PREMIUM (private production) |
+|---|---:|---:|
+| MQL5 EA source | ✅ | ✅ |
+| Minimal demo strategy (EMA cross) | ✅ | ❌ |
+| Multi-strategy routing/selection | ❌ | ✅ |
+| Advanced confluence/SMC-style logic | ❌ | ✅ |
+| News-aware gating / calendar | ❌ | ✅ |
+| Risk management (prop-firm constraints, DD/HWM) | ❌ | ✅ |
+| Time-gates / session rules | ❌ | ✅ |
+| Slippage/commission/latency modeling | ❌ | ✅ |
+| Backtesting engine + runners | ❌ | ✅ |
+| Parameter search / optimization | ❌ | ✅ |
+| Walk-forward analysis (WFA) | ❌ | ✅ |
+| Stress testing / robustness checks | ❌ | ✅ |
+| Overfit controls / validation tooling | ❌ | ✅ |
+| ML experiments/models (optional) | ❌ | ✅ |
+| Datasets redistributed | ❌ | ❌ |
+| Live trading allowed | ❌ | ✅ *(subject to your private ops + compliance)* |
+
+Notes:
+- CORE is intentionally constrained so the public code stays reviewable and does not ship operational “go-live” capability.
+- PREMIUM details, datasets, and operational infra are intentionally private.
+
 ## CORE vs PREMIUM (high-level)
 
 This repository (**CORE**) is the public demo/study layer.
