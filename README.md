@@ -41,7 +41,8 @@ Start with these files (in order):
 1) `TRADING_RESTRICTIONS.md` — non-negotiable usage restrictions.
 2) `DATA_SOURCES.md` — dataset policy (no redistribution).
 3) `MQL5/Experts/AurumCore.mq5` — the entire demo EA source.
-4) `docs/PREMIUM_NOTE.md` — sanitized overview of what exists privately.
+4) `MQL5/Indicators/` — educational indicators (spread, session windows, volatility).
+5) `docs/PREMIUM_NOTE.md` — sanitized overview of what exists privately.
 
 ## Quickstart (study/demo)
 
@@ -66,6 +67,14 @@ Safety notes:
 
 This is meant to be understandable and auditable in one sitting.
 
+## Educational indicators (MQL5)
+
+CORE also ships small indicators that help visualize execution constraints and market conditions (without exposing any proprietary strategy logic):
+
+- `MQL5/Indicators/AurumSpreadMonitor.mq5` — plots *current* spread (points) + a max threshold.
+- `MQL5/Indicators/AurumSessionWindow.mq5` — draws a daily time window with vertical lines (server time).
+- `MQL5/Indicators/AurumVolatilityATR.mq5` — plots ATR as a volatility proxy.
+
 ## Feature matrix (CORE vs PREMIUM)
 
 Legend:
@@ -76,6 +85,7 @@ Legend:
 | Area | CORE (public demo) | PREMIUM (private production) |
 |---|---:|---:|
 | MQL5 EA source | ✅ | ✅ |
+| Educational indicators (spread/session/ATR) | ✅ | ✅ |
 | Minimal demo strategy (EMA cross) | ✅ | ❌ |
 | Multi-strategy routing/selection | ❌ | ✅ |
 | Advanced confluence / proprietary logic | ❌ | ✅ |
@@ -95,6 +105,24 @@ Legend:
 Notes:
 - CORE is intentionally constrained so the public code stays reviewable and does not ship operational “go-live” capability.
 - PREMIUM details, datasets, and operational infra are intentionally private.
+
+## Contributing / requests
+
+This repo is intentionally narrow-scope. Contributions that fit well:
+
+- New **educational indicators** (visualization, overlays, regime/volatility tools).
+- Bugfixes and clarity improvements for CORE files.
+
+Contributions that will not be accepted:
+
+- Anything that enables broker-connected paper/live trading.
+- Anything that attempts to bypass `TRADING_RESTRICTIONS.md`.
+- Proprietary strategy logic from the PREMIUM system.
+
+If you want to request an indicator (MQL5): open an issue with:
+
+- Instrument (e.g., XAUUSD), timeframe, and example screenshots.
+- What you want to visualize (not “the strategy”), plus acceptance criteria.
 
 ## Glossary (quick)
 
@@ -118,6 +146,7 @@ Notes:
 ## Contents
 
 - `MQL5/Experts/AurumCore.mq5` — demo EA source
+- `MQL5/Indicators/` — educational indicators
 
 ## Notes
 
