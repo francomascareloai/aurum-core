@@ -1,0 +1,55 @@
+name: "Indicator request"
+description: Request an educational MQL5 indicator (CORE)
+labels: ["request", "indicator"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request an *indicator* (visualization) for MetaTrader 5.
+
+        Do **not** request broker-connected execution or live trading here. See `TRADING_RESTRICTIONS.md`.
+  - type: input
+    id: instrument
+    attributes:
+      label: Instrument
+      description: e.g., XAUUSD
+      placeholder: XAUUSD
+    validations:
+      required: true
+  - type: input
+    id: timeframe
+    attributes:
+      label: Timeframe(s)
+      description: e.g., M1, M5, M15
+      placeholder: M5
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What to visualize
+      description: Describe the inputs/outputs and what should be drawn.
+      placeholder: |
+        Example: plot current spread (points) and a max threshold line.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know it's done?
+      placeholder: |
+        Example:
+        - Buffer1 equals current spread in points
+        - Buffer2 equals configured max spread
+        - Works on any symbol/timeframe
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / examples
+      description: Optional but highly recommended.
+      placeholder: Paste screenshots or links.
+    validations:
+      required: false
