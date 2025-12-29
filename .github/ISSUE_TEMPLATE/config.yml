@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Trading restrictions
+    url: https://github.com/francomascareloai/aurum-core/blob/main/TRADING_RESTRICTIONS.md
+    about: Read before requesting anything.
