@@ -1,0 +1,40 @@
+# Core hygiene
+.DS_Store
+Thumbs.db
+
+# Python venv/caches (CORE should not ship Python code, but ignore anyway)
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Data and artifacts must not be committed to CORE
+/data/
+**/data/
+**/_artifacts/
+**/*.parquet
+**/*.csv
+**/*.h5
+**/*.pkl
+**/*.joblib
+**/*.onnx
+
+# Logs/reports
+logs/
+**/*.log
+**/*.tmp
+**/*.bak
+
+# Exclude internal tooling/infrastructure
+CLIPROXY/
+tools/
+.planning/
+DOCS/
+Python_Agent_Hub/
+LIBRARY/
+
+# Local configs
+.env
+.env.*
