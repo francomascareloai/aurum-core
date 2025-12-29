@@ -124,6 +124,21 @@ If you want to request an indicator (MQL5): open an issue with:
 - Instrument (e.g., XAUUSD), timeframe, and example screenshots.
 - What you want to visualize (not “the strategy”), plus acceptance criteria.
 
+## Custom work (indicators / automation)
+
+From time to time, I also take on **custom development** (paid/private) such as:
+
+- MQL5 indicators tailored to your workflow
+- Automation of a **manual strategy you already trade**, based on your written rules
+
+Important:
+
+- Requests must be **well-specified** (inputs, outputs, constraints, test cases).
+- Anything involving **broker-connected execution** or **live trading** is handled privately and is out of scope for this public CORE repository.
+- No guarantees of profitability; engineering work focuses on correctness, safety, and testability.
+
+To start: open an issue describing what you want built and what “done” means.
+
 ## Glossary (quick)
 
 - **EA (Expert Advisor):** automated trading program for MetaTrader.
