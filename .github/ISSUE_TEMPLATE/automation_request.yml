@@ -1,0 +1,46 @@
+name: "Automation request (private)"
+description: Request private automation of your written manual rules
+labels: ["request", "automation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is **CORE (public)** and does not accept broker-connected automation.
+
+        Use this template to describe a private request so we can assess scope.
+        If it requires live execution or broker connectivity, it stays private.
+  - type: textarea
+    id: rules
+    attributes:
+      label: Your written rules
+      description: Paste your entry/exit and risk rules as unambiguous steps.
+      placeholder: |
+        - Entry:
+        - Exit:
+        - Risk:
+        - Session/time windows:
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Platform, symbol(s), timeframes, max spread, max trades/day, etc.
+      placeholder: |
+        - Platform: MT5
+        - Symbols:
+        - Max spread:
+        - Trading hours:
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition of done
+      description: What deliverables and what tests are required?
+      placeholder: |
+        - Compiles cleanly
+        - Includes basic input validation
+        - Includes a demo mode (no trading)
+    validations:
+      required: true
