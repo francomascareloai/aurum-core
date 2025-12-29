@@ -1,4 +1,4 @@
-# EA_SCALPER_XAUUSD_CORE
+# Aurum Core
 
 Public **CORE** repository for study, analysis, and demonstration.
 
@@ -19,7 +19,7 @@ See:
 
 ## Contents
 
-- `MQL5/Experts/EA_SCALPER_XAUUSD.mq5` — demo EA source
+- `MQL5/Experts/AurumCore.mq5` — demo EA source
 
 ## Notes
 

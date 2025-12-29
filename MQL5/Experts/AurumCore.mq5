@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
-//|                                            EA_SCALPER_XAUUSD.mq5 |
-//|                                  EA_SCALPER_XAUUSD - CORE (DEMO) |
+//|                                                  AurumCore.mq5 |
+//|                                              Aurum Core (DEMO) |
 //+------------------------------------------------------------------+
 #property copyright "Franco"
 #property version   "0.1"
