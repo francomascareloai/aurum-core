@@ -23,6 +23,16 @@ At a high level, PREMIUM typically contains modules such as:
 - **Operational tooling**: monitoring, runbooks, deployment/incident procedures.
 - **ML experiments (optional)**: feature pipelines and model artifacts where applicable.
 
+### Indicators (categories only)
+
+PREMIUM may include a larger set of indicators and measurement tools. This section lists categories only (no proprietary rules, thresholds, or setups):
+
+- **Execution / costs**: spread regimes, slippage/latency observations.
+- **Volatility / regime**: volatility proxies and regime segmentation.
+- **Session / time**: time windows, session markers, scheduled-event awareness.
+- **Structure / context**: market structure visualizations and context markers.
+- **Risk telemetry**: drawdown/HWM visualization and risk state.
+
 CORE does not include these production components.
 
 ## Where to read next
@@ -30,3 +40,4 @@ CORE does not include these production components.
 - Restrictions: `TRADING_RESTRICTIONS.md`
 - Data policy: `DATA_SOURCES.md`
 - Demo EA source: `MQL5/Experts/AurumCore.mq5`
+- Educational indicators: `MQL5/Indicators/`
