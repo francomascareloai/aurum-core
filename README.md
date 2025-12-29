@@ -126,6 +126,17 @@ If you want to request an indicator (MQL5): open an issue with:
 
 ## Custom work (indicators / automation)
 
+## Contact (preferred: Telegram)
+
+- **Telegram (preferred):** check my Telegram in my GitHub profile / contact details.
+- **Repo requests:** please open a GitHub Issue using the templates (recommended so requirements stay written).
+- **Private / commercial:** for custom development, partnerships, or investor conversations, reach out on Telegram.
+
+Notes:
+
+- I don’t provide real-time support; async is best.
+- No promises of profitability; discussions focus on engineering, risk, and testability.
+
 From time to time, I also take on **custom development** (paid/private) such as:
 
 - MQL5 indicators tailored to your workflow
@@ -137,7 +148,7 @@ Important:
 - Anything involving **broker-connected execution** or **live trading** is handled privately and is out of scope for this public CORE repository.
 - No guarantees of profitability; engineering work focuses on correctness, safety, and testability.
 
-To start: open an issue describing what you want built and what “done” means.
+To start: open an issue describing what you want built and what “done” means (recommended). If it’s private/commercial, you can also reach out on Telegram.
 
 ## Glossary (quick)
 
