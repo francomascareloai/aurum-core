@@ -178,3 +178,7 @@ To start: open an issue describing what you want built and what “done” means
 
 - Python/Nautilus layer is kept private (PREMIUM).
 - No market data is redistributed in this repository.
+
+## Contact (preferred: Telegram)
+
+- Telegram: @francomascareloai
