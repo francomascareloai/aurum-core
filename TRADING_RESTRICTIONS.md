@@ -18,7 +18,7 @@ These forbidden uses apply even if you do not charge money and even if you call 
 
 - Reading the code to learn
 - Static analysis and experimentation in a local sandbox
-- Backtesting in a simulated environment **without** connecting to a broker and **without** placing real orders
+- Backtesting in a simulated environment (e.g., MT5 Strategy Tester) **without** connecting to a broker and **without** placing real orders
 
 ## No warranty
 

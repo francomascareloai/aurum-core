@@ -34,6 +34,15 @@ See:
 - `TRADING_RESTRICTIONS.md`
 - `DATA_SOURCES.md`
 
+## Support development (PC/infra goal: US$ 3,000)
+
+If you want to support development (new PC/infra + dedicated time), you can:
+
+- GitHub Sponsors: https://github.com/sponsors/francomascareloai
+- Telegram (private automation / partnerships): @francomascareloai
+
+Support tiers are intended for educational content and engineering Q&A — not signals, not performance claims.
+
 ## How to read this repo
 
 Start with these files (in order):
@@ -50,7 +59,7 @@ Start with these files (in order):
 2) Compile.
 3) Attach the EA to a chart.
 4) Keep `InpAllowTrading=false` by default.
-   - If you want to observe order flow mechanics in a local sandbox, you can toggle it to `true`.
+   - If you want to observe order mechanics, do it **only** in a simulated environment (e.g., MT5 Strategy Tester) that does **not** connect to a broker or route orders. See `TRADING_RESTRICTIONS.md`.
 
 Safety notes:
 - This EA **closes its own positions on remove/close** (see `OnDeinit`).
